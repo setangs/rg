@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NGSコーデコンセプトメーカー</title>
+
+<style>
+:root{
+ --ngs:#00d8ff;
+ --bg:#07111f;
+ --panel:rgba(9,20,40,.85);
+}
+
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+
+body{
+ font-family:"Segoe UI","Yu Gothic",sans-serif;
+ background:
+ radial-gradient(circle at top,#17488f 0%,#07111f 75%);
+ color:white;
+ min-height:100vh;
+ padding:20px;
+}
+
+.container{
+ max-width:1100px;
+ margin:auto;
+}
+
+h1{
+ text-align:center;
+ color:var(--ngs);
+ text-shadow:0 0 20px rgba(0,216,255,.7);
+ margin-bottom:10px;
+}
+
+.sub{
+ text-align:center;
+ margin-bottom:25px;
+ color:#b7e8ff;
+}
+
+.panel{
+ background:var(--panel);
+ border:1px solid rgba(0,216,255,.35);
+ border-radius:12px;
+ padding:20px;
+ margin-bottom:20px;
+ backdrop-filter:blur(10px);
+}
+
+.result-grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:20px;
+}
+
+.card{
+ background:rgba(255,255,255,.04);
+ border:1px solid rgba(255,255,255,.1);
+ border-radius:10px;
+ padding:18px;
+}
+
+.card h2{
+ color:#7feaff;
+ margin-bottom:10px;
+}
+
+.value{
+ font-size:28px;
+ font-weight:bold;
+ margin-top:15px;
+ margin-bottom:15px;
+ color:white;
+}
+
+button{
+ border:none;
+ border-radius:6px;
+ cursor:pointer;
+ font-weight:bold;
+}
+
+.main-btn{
+ width:100%;
+ padding:16px;
+ font-size:18px;
+ background:var(--ngs);
+ color:#00111c;
+ margin-bottom:20px;
+}
+
+.reroll{
+ background:#1b3555;
+ color:white;
+ padding:8px 14px;
+}
+
+.counter{
+ margin-top:8px;
+ color:#99dfff;
+ font-size:13px;
+}
+
+.big-result{
+ text-align:center;
+}
+
+.nickname{
+ font-size:34px;
+ color:#ffd76c;
+ margin-top:15px;
+ font-weight:bold;
+}
+
+.region{
+ margin-top:10px;
+ font-size:20px;
+ color:#bfeaff;
+}
+
+.share{
+ margin-top:15px;
+ background:#00c3ff;
+ color:#00111f;
+ padding:12px 20px;
+}
+
+.footer{
+ text-align:center;
+ margin-top:30px;
+ color:#bbb;
+ font-size:12px;
+}
+
+ul{
+ padding-left:20px;
+ line-height:1.8;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>NGSコーデコンセプトメーカー</h1>
+
+<div class="sub">
+PSO2 ニュージェネシス用 非公式ファンツール
+</div>
+
+<div class="panel">
+<h2>遊び方</h2>
+
+<ul>
+<li>「コンセプト生成」を押す</li>
+<li>表示されたテーマでコーデを考える</li>
+<li>SSを撮影する</li>
+<li>Xでシェアする</li>
+</ul>
+
+<br>
+
+テーマ・モチーフ・雰囲気から自由に発想してみよう！
+</div>
+
+<button class="main-btn" onclick="generateAll()">
+🎲 コンセプト生成
+</button>
+
+<div class="result-grid">
+
+<div class="card">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ランダムお題ガチャ</title>
+<meta name="description" content="PSO2 ニュージェネシスのコーデのお題を3つランダムで決める非公式ツール。結果をXでシェア！ #ランダムお題ガチャ">
+<meta property="og:title" content="ランダムお題ガチャ">
+<meta property="og:description" content="コーデのお題を3つガチャで決めよう！ #ランダムお題ガチャ">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef4f8; --panel:#ffffff; --ink:#1b2a38; --sub:#6b7c8c;
+  --cyan:#00b4e6; --cyan-d:#007fb0; --navy:#14283c; --line:#cfdbe5; --warn:#e8453c;
+  --cut:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; color:var(--ink); font-family:"Noto Sans JP",system-ui,sans-serif; line-height:1.7;
+  background:
+    linear-gradient(rgba(0,180,230,.06) 1px,transparent 1px) 0 0/32px 32px,
+    linear-gradient(90deg,rgba(0,180,230,.06) 1px,transparent 1px) 0 0/32px 32px,
+    radial-gradient(ellipse at 80% -10%,#d7f1fb 0,transparent 55%),
+    radial-gradient(ellipse at 0% 100%,#e3ecf7 0,transparent 50%),
+    var(--bg);
+  min-height:100vh;
+}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px 48px}
+
+header{background:var(--navy);color:#fff;border-bottom:3px solid var(--cyan);position:relative;overflow:hidden}
+header::after{content:"";position:absolute;right:-60px;top:-40px;width:220px;height:220px;border:2px solid rgba(0,180,230,.35);transform:rotate(45deg)}
+header::before{content:"";position:absolute;right:20px;top:20px;width:120px;height:120px;border:1px solid rgba(255,255,255,.2);transform:rotate(45deg)}
+header .wrap{padding-top:28px;padding-bottom:24px;position:relative;z-index:1}
+.eyebrow{font-family:Orbitron,sans-serif;font-size:.75rem;letter-spacing:.3em;color:var(--cyan)}
+h1{margin:4px 0 0;font-size:clamp(1.6rem,5vw,2.4rem);font-weight:700;letter-spacing:.05em}
+h1 small{display:block;font-family:Orbitron,sans-serif;font-size:.7rem;font-weight:500;letter-spacing:.25em;color:#9fc4d8;margin-top:2px}
+
+.sec-title{display:flex;align-items:center;gap:10px;margin:28px 0 10px;font-weight:700;font-size:1.1rem;letter-spacing:.08em}
+.sec-title::before{content:"";width:6px;height:22px;background:var(--cyan)}
+.sec-title .en{font-family:Orbitron,sans-serif;font-size:.7rem;color:var(--cyan-d);letter-spacing:.2em;font-weight:500}
+
+.panel{
+  background:var(--panel);border:1px solid var(--line);position:relative;padding:18px 20px;
+  clip-path:polygon(0 0,calc(100% - var(--cut)) 0,100% var(--cut),100% 100%,var(--cut) 100%,0 calc(100% - var(--cut)));
+  filter:drop-shadow(0 2px 0 rgba(20,40,60,.05));
+}
+.panel::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(var(--cyan),transparent)}
+.rules ol{margin:6px 0 0;padding-left:1.3em}
+.rules li{margin:4px 0}
+.rules .note{margin-top:10px;font-size:.88rem;color:var(--sub)}
+.tag{display:inline-block;font-weight:700;color:#fff;background:var(--cyan-d);padding:0 8px;margin-right:4px;font-size:.85rem}
+
+/* settings */
+.opt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.chk{display:flex;align-items:center;gap:8px;border:2px solid var(--cyan);background:#f4fbfe;padding:8px 12px;cursor:pointer;font-weight:700;user-select:none}
+.chk input{width:18px;height:18px;accent-color:var(--cyan-d)}
+.chk small{display:block;font-weight:400;color:var(--sub);font-size:.72rem;line-height:1.2}
+.chk.must{border-color:var(--navy);background:#e9f0f6}
+.hint{font-size:.8rem;color:var(--sub);margin:8px 0 0}
+.error{color:var(--warn);font-size:.85rem;font-weight:700;min-height:1.2em;margin-top:6px}
+
+/* buttons */
+.btn{
+  font:700 1rem "Noto Sans JP",sans-serif;letter-spacing:.08em;cursor:pointer;border:0;color:#fff;
+  background:var(--navy);padding:10px 22px;position:relative;
+  clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);
+  transition:background .15s,transform .05s;
+}
+.btn:hover{background:var(--cyan-d)}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:var(--cyan);color:#04202e}
+.btn.primary:hover{background:#2bcaf5}
+.btn.x{background:#000}
+.btn.x:hover{background:#333}
+.btn.ghost{background:#fff;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy)}
+.btn.ghost:hover{background:#e6f6fc}
+.btn.small{padding:6px 14px;font-size:.85rem}
+.big-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+
+/* result cards */
+.cards{display:grid;gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--cyan);padding:16px 18px}
+.card-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.card-head h3{margin:0;font-size:1rem}
+.card-head h3 span{font-family:Orbitron,sans-serif;color:var(--cyan-d);margin-right:8px}
+.reroll-box{display:flex;align-items:center;gap:10px}
+.count{font-size:.85rem;color:var(--sub)}
+.count b{font-family:Orbitron,sans-serif;font-size:1.2rem;color:var(--navy);margin:0 2px}
+.chip{display:inline-block;font-size:.75rem;font-weight:700;color:var(--cyan-d);border:1px solid var(--cyan);padding:0 10px;letter-spacing:.1em}
+.word{font-size:clamp(1.6rem,6vw,2.4rem);font-weight:700;letter-spacing:.06em;margin:4px 0 0;line-height:1.3}
+.word-hint{font-size:.85rem;color:var(--sub);min-height:1.4em}
+.rolling .word{opacity:.45}
+.empty{color:var(--sub);font-size:.9rem}
+
+/* combo */
+.combo{margin-top:16px;padding:14px 18px;background:var(--navy);color:#fff;border-left:6px solid var(--cyan);font-size:clamp(1.1rem,4vw,1.5rem);font-weight:700;letter-spacing:.06em}
+.combo .x{color:var(--cyan);margin:0 .4em;font-family:Orbitron,sans-serif}
+.total{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-top:12px;font-size:.95rem}
+.total b{font-family:Orbitron,sans-serif;font-size:1.3rem;color:var(--cyan-d)}
+
+/* history & list */
+.history{list-style:none;margin:0;padding:0;font-size:.9rem}
+.history li{padding:6px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.history .n{font-family:Orbitron,sans-serif;color:var(--cyan-d);font-weight:700}
+details summary{cursor:pointer;font-weight:700}
+.pool h4{margin:12px 0 4px;font-size:.9rem;color:var(--cyan-d)}
+.pool p{margin:0;font-size:.85rem}
+.pool span{display:inline-block;border:1px solid var(--line);background:#f7fafc;padding:0 8px;margin:2px 4px 2px 0}
+
+footer{margin-top:40px;background:var(--navy);color:#c4d4e0;font-size:.8rem;border-top:3px solid var(--cyan)}
+footer .wrap{padding-top:18px;padding-bottom:22px}
+footer strong{color:#fff}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,40px);background:var(--navy);color:#fff;padding:10px 20px;border-left:4px solid var(--cyan);opacity:0;transition:.25s;pointer-events:none;z-index:9}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">UNOFFICIAL FAN TOOL</div>
+    <h1>ランダムお題ガチャ<small>RANDOM THEME GACHA</small></h1>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="sec-title">ルール<span class="en">RULE</span></div>
+  <section class="panel rules">
+    <p style="margin:0">コーデの「お題」をガチャで<strong>3つ</strong>決める遊びです。出た3つの要素を使って、自由にコーデを組んでみましょう！</p>
+    <ol>
+      <li>「テーマ」「カラー」「髪型」「モチーフ」「パーツ」の5ジャンルから、<strong>異なるジャンルを3つ</strong>ランダムに選びます。（例：天使界隈 × 白 × 翼 ／ 和装 × ポニーテール × 猫）</li>
+      <li>同じジャンルは重なりません。（色が3つ並ぶ、動物が3匹並ぶ、などは出ません）</li>
+      <li>相性の悪い組み合わせ（例：天使界隈 × 黒）は出ないようにしています。</li>
+      <li>気に入らない要素は、その枠だけ<strong>リロール</strong>できます。リロール回数はカウントされます！</li>
+    </ol>
+    <p class="note">※ 要素の細かい指定（具体的なアイテム名など）は自由です。お題に合うものを自分で探してみてください。</p>
+  </section>
+
+  <div class="sec-title">設定<span class="en">SETTING</span></div>
+  <section class="panel">
+    <p style="margin:0 0 10px;font-weight:700">▼ 出すジャンルを選んでください（3つ以上ON）</p>
+    <div class="opt-grid" id="catOpts"></div>
+    <div class="opt-grid" style="margin-top:10px">
+      <label class="chk must"><input type="checkbox" id="themeMust" checked><span>テーマを必ず入れる<small>OFFだとテーマ無しも出ます</small></span></label>
+    </div>
+    <div class="error" id="setErr"></div>
+    <div class="big-actions">
+      <button class="btn primary" id="rollAll">▶ ガチャを回す！</button>
+    </div>
+  </section>
+
+  <div class="sec-title">結果<span class="en">RESULT</span></div>
+  <div class="cards" id="cards"></div>
+  <div class="combo" id="combo" style="display:none"></div>
+
+  <div class="total">
+    <div>合計リロール回数　<b id="cTotal">0</b> 回</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn ghost small" id="copyText">結果をコピー</button>
+      <button class="btn x" id="shareX">𝕏 で結果をシェア</button>
+    </div>
+  </div>
+
+  <div class="sec-title">履歴<span class="en">HISTORY</span></div>
+  <section class="panel">
+    <ul class="history" id="history"></ul>
+    <p class="empty" id="histEmpty">まだ履歴はありません。</p>
+    <button class="btn ghost small" id="clearHist" style="margin-top:10px">履歴とカウントをリセット</button>
+  </section>
+
+  <div class="sec-title">要素一覧<span class="en">POOL</span></div>
+  <section class="panel pool">
+    <details>
+      <summary>ツールに入っている要素を見る</summary>
+      <div id="pool"></div>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="margin:0 0 6px"><strong>【ご注意】</strong>本サイトは有志による<strong>非公式のファンツール</strong>です。株式会社セガおよび『ファンタシースターオンライン2 ニュージェネシス』の公式とは一切関係ありません。</p>
+    <p style="margin:0 0 6px">『ファンタシースターオンライン2 ニュージェネシス』に関する名称・画像・その他の権利は、すべて<strong>株式会社セガ</strong>に帰属します。</p>
+    <p style="margin:0">© SEGA　/　ランダムお題ガチャ（非公式）</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/*CORE-START*/
+// ===== データ =====
+// c:ジャンル / n:表示名 / t:自分のタグ / a:一緒に出したくないタグ / h:ひとこと
+const CATS = {
+  theme:  { label:"テーマ",   order:1 },
+  color:  { label:"カラー",   order:2 },
+  hair:   { label:"髪型",     order:3 },
+  animal: { label:"モチーフ", order:4 },
+  parts:  { label:"パーツ",   order:5 }
+};
+const E = (c,n,t,a,h) => ({c,n,t:t||[],a:a||[],h:h||""});
+const ELEMENTS = [
+  // --- テーマ ---
+  E("theme","天使界隈",["holy"],["black","orange","green"],"白・羽・ふんわり清楚"),
+  E("theme","堕天使",["fallen"],["orange","green","lblue"],"黒・翼・ダークな雰囲気"),
+  E("theme","地雷系",["jirai"],["green","orange","gold"],"黒×ピンク・フリル・レース"),
+  E("theme","ゴスロリ",["gothic"],["orange","green","lblue"],"黒・フリル・ドール系"),
+  E("theme","和装",["wa"],["silver"],"着物・和風小物"),
+  E("theme","浴衣・お祭り",["wa","yukata"],["silver"],"夏祭り・法被・うちわ"),
+  E("theme","魔女",["witch"],[],"ローブ・帽子・魔法使い"),
+  E("theme","サイバー・SF",["cyber"],[],"近未来・ネオン・メカ"),
+  E("theme","軍人・ミリタリー",["mil"],["pink","lblue","purple"],"軍帽・ジャケット・クール"),
+  E("theme","制服・セーラー",["school"],["gold","silver"],"学園・セーラー襟・ブレザー"),
+  E("theme","お嬢様・エレガント",["elegant"],["orange","green"],"ドレス・上品・清楚"),
+  E("theme","アイドル",["idol"],["green"],"ステージ衣装・フリル・キラキラ"),
+  E("theme","チャイナドレス",["china"],["silver","lblue"],"スリット・刺繍・華やか"),
+  E("theme","ウェディング・ドレス",["wedding"],["orange","green"],"純白・ヴェール・式典"),
+  E("theme","メイド",["maid"],["gold","orange","green","silver"],"エプロン・カチューシャ"),
+  E("theme","カジュアル私服",["casual"],[],"パーカー・デニム・普段着"),
+  E("theme","スポーツ",["sport"],["gold"],"ジャージ・スポーティー"),
+  E("theme","忍者・くノ一",["wa","ninja"],["pink","lblue","gold"],"忍装束・マフラー・クール"),
+  E("theme","鬼",["oni"],["lblue","silver"],"角・和風・力強さ"),
+  E("theme","踊り子・アラビアン",["dancer"],["silver"],"透け感・ストール・砂漠"),
+  E("theme","水着・夏",["swim"],["silver"],"水着・サマーコーデ"),
+  E("theme","ファンタジー・異世界",["fantasy"],[],"冒険者・王道ファンタジー"),
+  E("theme","パンク",["punk"],["gold","lblue"],"ストリート・バンド・尖った雰囲気"),
+  E("theme","ハロウィン",["halloween"],["lblue","silver"],"仮装・オレンジ・紫"),
+  E("theme","サンタ・冬",["santa"],["purple","orange","black"],"赤白・もこもこ・冬服"),
+  // --- カラー ---
+  E("color","白",["white"]), E("color","黒",["black"]), E("color","赤",["red"]),
+  E("color","青",["blue"]), E("color","水色",["lblue"]), E("color","ピンク",["pink"]),
+  E("color","紫",["purple"]), E("color","金",["gold"]), E("color","銀",["silver"]),
+  E("color","緑",["green"]), E("color","オレンジ",["orange"]),
+  // --- 髪型 ---
+  E("hair","ポニーテール"), E("hair","ツインテール",[],["wedding","elegant"]),
+  E("hair","ツーサイドアップ"), E("hair","サイドテール"), E("hair","お団子"),
+  E("hair","三つ編み・おさげ"), E("hair","ロング"), E("hair","ミディアム"),
+  E("hair","ボブ"), E("hair","ショート"),
+  E("hair","外ハネ",[],["wedding","elegant"]),
+  E("hair","目隠れ",[],["idol","holy"]),
+  E("hair","ウェーブ",[],["ninja","sport"]),
+  E("hair","姫カット",[],["cyber","sport","punk","mil"]),
+  E("hair","編み込み"),
+  // --- モチーフ（動物など） ---
+  E("animal","猫"), E("animal","狐",[],["holy","mil"]), E("animal","うさぎ",[],["mil"]),
+  E("animal","狼",[],["holy","idol","maid"]),
+  E("animal","熊のぬいぐるみ",[],["mil","cyber"]),
+  E("animal","蝶",["butterfly"],["sport","mil","wing"]),
+  // --- パーツ ---
+  E("parts","翼",["wing"],["school","sport","maid","casual","butterfly"]),
+  E("parts","角",["horn"],["holy","school","sport","idol"]),
+  E("parts","刀",["blade"],["idol","maid","swim","holy"]),
+  E("parts","ヘッドフォン",["phones"],["wa","wedding","dancer","holy","elegant"]),
+  E("parts","眼帯",["patch"],["holy","wedding","elegant","idol"]),
+  E("parts","大きなリボン",["ribbon"],["mil"]),
+  E("parts","帽子",["hat"]),
+  E("parts","マスク",["mask"],["holy","wedding","elegant"]),
+  E("parts","傘",["umbrella"],["cyber","sport"]),
+  E("parts","花飾り",["flower"],["cyber","mil","punk"]),
+  E("parts","メガネ",["glasses"]),
+  E("parts","チョーカー",["choker"],["sport"]),
+  E("parts","尻尾",["tail2"],["wedding","sport","elegant"]),
+  E("parts","ヴェール",["veil"],["cyber","sport","punk","casual"])
+];
+const CAT_KEYS = Object.keys(CATS);
+
+const compat = (x, y) =>
+  !x.a.some(t => y.t.includes(t)) && !y.a.some(t => x.t.includes(t));
+const compatAll = (el, others) => others.every(o => compat(el, o));
+const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+const shuffle = arr => { const a = arr.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; };
+
+// 3つ生成。cats: 有効ジャンル / themeMust: テーマ必須。失敗時は null
+function generate(cats, themeMust){
+  if(cats.length < 3) return null;
+  if(themeMust && !cats.includes("theme")) return null;
+  for(let i=0;i<300;i++){
+    let chosen;
+    if(themeMust){
+      chosen = ["theme", ...shuffle(cats.filter(c=>c!=="theme")).slice(0,2)];
+    }else{
+      chosen = shuffle(cats).slice(0,3);
+    }
+    const out = [];
+    let ok = true;
+    for(const c of shuffle(chosen)){
+      const cand = shuffle(ELEMENTS.filter(e => e.c===c && compatAll(e,out)));
+      if(!cand.length){ ok=false; break; }
+      out.push(cand[0]);
+    }
+    if(ok) return chosen.map(c => out.find(e=>e.c===c));   // 並びは chosen の順
+  }
+  return null;
+}
+
+// 1枠だけ引き直し。others: 残り2つ / cur: 現在の要素
+function rerollOne(others, cur, cats, themeMust){
+  const used = others.map(o=>o.c);
+  let allowed = cats.filter(c => !used.includes(c));
+  if(themeMust && !used.includes("theme")) allowed = allowed.filter(c => c==="theme");
+  const cand = ELEMENTS.filter(e => allowed.includes(e.c) && e.n!==cur.n && compatAll(e, others));
+  return cand.length ? pick(cand) : null;
+}
+/*CORE-END*/
+
+(() => {
+  const SITE_URL = "";                       // ★公開後に固定したいURLがあれば入れる（空なら現在のURL）
+  const HASHTAGS = "#ランダムお題ガチャ";   // ★シェア時のハッシュタグ
+  const TITLE    = "ランダムお題ガチャ";
+  const STORE    = "randomOdaiGacha.v1";
+
+  const $ = id => document.getElementById(id);
+  const state = { slots:[], counts:[0,0,0], history:[], cats:CAT_KEYS.slice(), themeMust:true };
+
+  /* ---- 保存 ---- */
+  const save = () => { try{ localStorage.setItem(STORE, JSON.stringify({cats:state.cats,themeMust:state.themeMust,counts:state.counts,history:state.history})); }catch(e){} };
+  const load = () => { try{
+    const d = JSON.parse(localStorage.getItem(STORE)||"null"); if(!d) return;
+    if(Array.isArray(d.cats)) state.cats = d.cats.filter(c=>CAT_KEYS.includes(c));
+    if(typeof d.themeMust==="boolean") state.themeMust = d.themeMust;
+    if(Array.isArray(d.counts)&&d.counts.length===3) state.counts = d.counts.map(n=>+n||0);
+    if(Array.isArray(d.history)) state.history = d.history.slice(0,10);
+  }catch(e){} };
+
+  /* ---- 設定UI ---- */
+  function buildOpts(){
+    const box = $("catOpts"); box.innerHTML = "";
+    CAT_KEYS.forEach(k => {
+      const lb = document.createElement("label"); lb.className = "chk";
+      const cb = document.createElement("input"); cb.type="checkbox"; cb.checked = state.cats.includes(k); cb.dataset.k = k;
+      cb.onchange = readOpts;
+      const sp = document.createElement("span"); sp.textContent = CATS[k].label;
+      lb.append(cb, sp); box.appendChild(lb);
+    });
+    $("themeMust").checked = state.themeMust;
+    $("themeMust").onchange = readOpts;
+  }
+  function readOpts(){
+    state.cats = [...document.querySelectorAll("#catOpts input")].filter(i=>i.checked).map(i=>i.dataset.k);
+    state.themeMust = $("themeMust").checked;
+    validate(); save();
+  }
+  function validate(){
+    const err = $("setErr");
+    if(state.cats.length < 3){ err.textContent = "ジャンルを3つ以上ONにしてください"; return false; }
+    if(state.themeMust && !state.cats.includes("theme")){ err.textContent = "「テーマを必ず入れる」がONなので、テーマもONにしてください"; return false; }
+    err.textContent = ""; return true;
+  }
+
+  /* ---- 描画 ---- */
+  function renderCards(){
+    const box = $("cards"); box.innerHTML = "";
+    for(let i=0;i<3;i++){
+      const s = state.slots[i];
+      const card = document.createElement("article"); card.className = "card"; card.id = "card"+i;
+      const head = document.createElement("div"); head.className = "card-head";
+      const h3 = document.createElement("h3"); const sp = document.createElement("span"); sp.textContent = "0"+(i+1);
+      h3.append(sp, document.createTextNode("要素"));
+      const rb = document.createElement("div"); rb.className = "reroll-box";
+      const cnt = document.createElement("span"); cnt.className = "count"; cnt.innerHTML = 'リロール <b>'+state.counts[i]+'</b> 回';
+      const btn = document.createElement("button"); btn.className = "btn small"; btn.textContent = "リロール"; btn.onclick = () => reroll(i);
+      rb.append(cnt, btn); head.append(h3, rb);
+      const body = document.createElement("div");
+      if(s){
+        const chip = document.createElement("span"); chip.className = "chip"; chip.textContent = CATS[s.c].label;
+        const w = document.createElement("div"); w.className = "word"; w.textContent = s.n;
+        const hint = document.createElement("div"); hint.className = "word-hint"; hint.textContent = s.h ? "イメージ：" + s.h : "";
+        body.append(chip, w, hint);
+      }else{
+        const p = document.createElement("div"); p.className = "empty"; p.textContent = "まだ出していません"; body.appendChild(p);
+      }
+      card.append(head, body); box.appendChild(card);
+    }
+    const combo = $("combo");
+    if(state.slots.length===3){
+      combo.style.display = "";
+      combo.innerHTML = "";
+      state.slots.forEach((s,i) => {
+        if(i) { const x = document.createElement("span"); x.className="x"; x.textContent="×"; combo.appendChild(x); }
+        combo.appendChild(document.createTextNode(s.n));
+      });
+    }else combo.style.display = "none";
+    $("cTotal").textContent = state.counts.reduce((a,b)=>a+b,0);
+    renderHistory();
+  }
+  function renderHistory(){
+    const ul = $("history"); ul.innerHTML = "";
+    $("histEmpty").style.display = state.history.length ? "none" : "";
+    state.history.forEach((h,i) => {
+      const li = document.createElement("li");
+      const n = document.createElement("span"); n.className = "n"; n.textContent = "#"+(state.history.length-i);
+      const t = document.createElement("span"); t.textContent = h.join(" × ");
+      li.append(n,t); ul.appendChild(li);
+    });
+  }
+  function renderPool(){
+    const box = $("pool"); box.innerHTML = "";
+    CAT_KEYS.forEach(k => {
+      const h = document.createElement("h4"); h.textContent = CATS[k].label;
+      const p = document.createElement("p");
+      ELEMENTS.filter(e=>e.c===k).forEach(e => { const s = document.createElement("span"); s.textContent = e.n; p.appendChild(s); });
+      box.append(h,p);
+    });
+  }
+
+  /* ---- 操作 ---- */
+  function pushHistory(){
+    state.history.unshift(state.slots.map(s=>s.n));
+    state.history = state.history.slice(0,10);
+  }
+  function animate(ids, fn){
+    ids.forEach(id => $(id) && $(id).classList.add("rolling"));
+    setTimeout(fn, 280);
+  }
+  function rollAll(){
+    if(!validate()) return;
+    const first = state.slots.length===0;
+    const res = generate(state.cats, state.themeMust);
+    if(!res){ toast("条件に合う組み合わせが作れませんでした"); return; }
+    if(!first) state.counts = state.counts.map(n=>n+1);
+    animate(["card0","card1","card2"], () => { state.slots = res; pushHistory(); renderCards(); save(); });
+  }
+  function reroll(i){
+    if(state.slots.length<3){ toast("先に「ガチャを回す！」を押してください"); return; }
+    if(!validate()) return;
+    const others = state.slots.filter((_,j)=>j!==i);
+    const next = rerollOne(others, state.slots[i], state.cats, state.themeMust);
+    if(!next){ toast("この枠に入れられる要素がありません"); return; }
+    state.counts[i]++;
+    animate(["card"+i], () => { state.slots[i] = next; pushHistory(); renderCards(); save(); });
+  }
+
+  /* ---- シェア ---- */
+  const siteUrl = () => SITE_URL || (location.protocol.startsWith("http") ? location.origin + location.pathname : "（公開URL）");
+  const resultText = () => {
+    const total = state.counts.reduce((a,b)=>a+b,0);
+    return `【${TITLE}】\n今回のお題は「${state.slots.map(s=>s.n).join(" × ")}」！\nリロール合計 ${total}回`;
+  };
+  const ready = () => { if(state.slots.length<3){ toast("先に「ガチャを回す！」を押してください"); return false; } return true; };
+  $("shareX").onclick = () => {
+    if(!ready()) return;
+    const text = resultText() + "\n" + HASHTAGS;
+    window.open("https://x.com/intent/post?text="+encodeURIComponent(text)+"&url="+encodeURIComponent(siteUrl()), "_blank", "noopener");
+  };
+  $("copyText").onclick = () => {
+    if(!ready()) return;
+    (navigator.clipboard ? navigator.clipboard.writeText(resultText()+"\n"+HASHTAGS+"\n"+siteUrl()) : Promise.reject())
+      .then(()=>toast("コピーしました")).catch(()=>toast("コピーできませんでした"));
+  };
+  let tt;
+  function toast(msg){ const el=$("toast"); el.textContent=msg; el.classList.add("show"); clearTimeout(tt); tt=setTimeout(()=>el.classList.remove("show"),1800); }
+
+  $("rollAll").onclick = rollAll;
+  $("clearHist").onclick = () => { state.history=[]; state.counts=[0,0,0]; renderCards(); save(); toast("リセットしました"); };
+
+  load(); buildOpts(); renderPool(); renderCards(); validate();
+})();
+</script>
+</body>
+</html>
